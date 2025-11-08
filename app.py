@@ -70,14 +70,12 @@ def set_sql_alchemy_uri(app: Flask):
 
 def get_limiter(app):
     default_limits = getenv("DEFAULT_LIMITS", '').split(',')
-    print(default_limits)
     limiter = Limiter(
         key_func=get_sender_ip,
         app=app,
         strategy="fixed-window",
         default_limits=default_limits,
     )
-    print(limiter)
     return limiter
 
 def generate_random():

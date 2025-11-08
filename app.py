@@ -165,11 +165,3 @@ if __name__ == "__main__":
         logging.critical("Application failed to start due to initialization error.")
         exit(1)
     run_app(app)
-
-Zenora
-pytz
-Flask
-Flask-Limiter
-python-dotenv
-colorama
-waitress

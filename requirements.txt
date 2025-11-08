@@ -2,6 +2,9 @@ Zenora
 pytz
 Flask
 Flask-Limiter
+Flask-SQLAlchemy
+pymysql
+Flask-WTF
 python-dotenv
 colorama
 waitress

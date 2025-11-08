@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block js %} {{url_for('static', filename='assets/login.js')}} {% endblock %}
+{% block title %} - Login{% endblock %}
+{% block style %}
+<style>
+    #loading-svg{
+        width: 100px;
+        height: 100px;
+        animation: spin 2s linear infinite;
+        margin: 20px auto 60px auto;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
+{% endblock %}
+{% block content %}
+    <h2 class="top-title">Logging in</h2>
+    <img src="{{ url_for('static', filename='icons/loading.svg') }}" alt="" id="loading-svg">
+{% endblock %}

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+html{
+    font-family: 'Orbitron', sans-serif;
+}
+body{
+    background: #363636;
+    background: radial-gradient(circle,rgba(54, 54, 54, 1) 0%, rgba(8, 8, 8, 1) 100%);
+    margin: 0;
+    color: rgb(230, 230, 230);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    --blurple: #5865F2;
+}
+.main-container{
+    margin: auto auto;
+    height: min-content;
+    background: #1e1e1e;
+    background: radial-gradient(circle, rgba(30,30,30,1) 0%, rgba(15,15,15,1) 100%);
+    border-radius: 15px;
+    border: 2px solid #444;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 460px;
+    position: relative;
+    animation: fadeSlideIn 0.8s ease forwards;
+}
+.error{
+    color: #ff4d4d;
+    font-weight: 600;
+}
+.success{
+    color: #72ba6c;
+    font-weight: 600;
+}
+.helix-icon{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    top: 14px;
+    left: 14px;
+    animation: wave;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.creator{
+    position: absolute;
+    font-size: 14px;
+    bottom: 0px;
+}
+.creator a{
+    color: #df004a;
+}
+.creator span{
+    color: rgb(138, 138, 138);
+    margin-top: 5px;
+    font-size: 12px;
+}
+@keyframes dance {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+@keyframes nope {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+@keyframes wave {
+    0% { transform: scale(1) rotate(0deg)}
+    50% { transform: scale(1.1) rotate(10deg)}
+    100% { transform: scale(1) rotate(0deg)}
+}
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

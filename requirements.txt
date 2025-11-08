@@ -1,0 +1,7 @@
+Zenora
+pytz
+Flask
+Flask-Limiter
+python-dotenv
+colorama
+waitress

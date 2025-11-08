@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %} - Link{% endblock %}
+{% block css %} {{url_for('static', filename='assets/link.css')}} {% endblock %}
+{% block content %}
+    {% if valid %}
+        <h2 class="top-title">Link Discord</h2>
+        <h3 class="description">
+            Click the button below to continute
+        </h3>
+        <button class="link-button" onclick="window.location.href='{{ oauth_url }}'">
+            <img src="/static/icons/discord.svg" alt="Discord Logo">
+            <span>Link Discord</span>
+        </button>
+    {% else %}
+        <h2 class="top-title error">Error</h2>
+        <h3 class="description error">
+            Invalid Link
+        </h3>
+        <button class="link-button disabled">
+            <img src="/static/icons/discord.svg" alt="Discord Logo">
+            <span>Link Discord</span>
+        </button>
+    {% endif %}
+{% endblock %}

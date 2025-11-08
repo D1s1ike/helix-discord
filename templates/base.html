@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='icons/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/link.css') }}">
+    <title>{{ locals.title }} {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/base.css')}}">
+    <link rel="stylesheet" href="{% block css %}{% endblock %}">
+    {% block style %}{% endblock %}
+</head>
+<body>
+    <div class="main-container">
+    <img src="/static/icons/helix.png" alt="Helix Icon" class="helix-icon">
+    {% block content %}{% endblock %}
+    </div>
+    <h4 class="creator">Made with 💞 by
+        <a href="https://discord.gg/ey8bMnBcZA">Dislike's Lab</a>
+        <br>
+        <span>Not affiliated with Discord Inc or Helix</span>
+    </h4>
+    <script src="{% block js %}{% endblock %}"></script>
+</body>
+</html>

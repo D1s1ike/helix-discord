@@ -1,0 +1,45 @@
+.link-button{
+    background-color: var(--blurple);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    width: calc(100%);
+    border-radius: 10px;
+    padding: 10px;
+    height: 50px;
+    transition: 0.3s ease;
+    margin-top: 20px;
+}
+.link-button img{
+    height: 30px
+}
+.link-button span{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Orbitron', sans-serif;
+    margin: auto;
+}
+.link-button:hover{
+    background-color: #4049b1;
+}
+.link-button:active{
+    transform: scale(0.98);
+}
+.description{
+    max-width: calc(100% - 20px);
+    margin: auto;
+    font-size: 18px;
+}
+.disabled{
+    background-color: grey;
+    cursor: not-allowed;
+}
+.disabled:hover{
+    background-color: grey;
+}
+.disabled:active{
+    animation: nope 0.2s;
+}

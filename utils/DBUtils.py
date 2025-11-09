@@ -77,10 +77,14 @@ class DBUtils:
                 self.db.session.delete(code_entry)
                 self.db.session.commit()
                 existing_user = User.query.filter_by(helix_id=helix_id).first()
+                if not existing_user:
+                    existing_user = User.query.filter_by(discord_id=discord_id).first()
                 if existing_user:
                     if existing_user.discord_id != discord_id:
                         existing_user.discord_id = discord_id
-                        self.db.session.commit()
+                    if existing_user.helix_id != helix_id:
+                        existing_user.helix_id = helix_id
+                    self.db.session.commit()
                     return existing_user
                 new_user = User(
                     discord_id=discord_id,
